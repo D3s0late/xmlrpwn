@@ -80,7 +80,7 @@ def main():
     elif args.mode == 'upload' and args.username and args.password and filename is not None:
         print("[!] Trying to upload php to web server..")
         UploadFile(filename)
-        print("[!] File Uploaded to /wp-content/uploads/{0}/{1}/".format(data.year,data.month))
+        print("[!] File Uploaded to /wp-content/uploads/{0}/{1}/".format(data.year,data.strftime('%m')))
     elif args.mode == 'upload' and args.username and args.password and filename is None:
         print("[x] ERROR!") 
         print("[x] Valid username, password and file is required for this mode.")
